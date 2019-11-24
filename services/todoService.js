@@ -46,8 +46,8 @@ module.exports = {
             description: title,
             due: time().format('HH:mm MM/DD/YYYY')
         };
-        TodoModel.findByIdAndUpdate()
-        TodoModel.update({'_id': id}, todo, (err, ret) => {
+        console.log(todo);
+        TodoModel.updateOne({'_id': id}, todo, (err, ret) => {
             console.log(err);
             console.log(ret);
             if (err != null) {

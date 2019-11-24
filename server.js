@@ -6,8 +6,8 @@ const Todo = require('./controller/todo');
 let app = express();
 let router = express.Router();
 router.route('/todo').get(Todo.fetch);
-router.route('/todo/:content').post(Todo.add);
-router.route('/todo/:id/:content').put(Todo.update);
+router.route('/todo/:title').post(Todo.add);
+router.route('/todo/:id/:title').put(Todo.update);
 router.route('/todo/:id').delete(Todo.delete);
 app.use(router);
 

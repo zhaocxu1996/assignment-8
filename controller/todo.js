@@ -14,10 +14,10 @@ class todo {
     }
     //add controller
     async add(req, res, next) {
-        let content = req.params.content;
-        console.log(content);
+        let title = req.params.title;
+        console.log(title);
         res.setHeader("Content-Type", "application/json");
-        TodoService.create(content, res);
+        TodoService.create(title, res);
     }
     //update controller
     async update(req, res, next) {
